@@ -28,7 +28,7 @@ button:hover {
     cursor:pointer;
 }
 
-.flex-container {
+.container {
     display: flex;
     flex-wrap: wrap;
     width: 500px;
@@ -37,8 +37,6 @@ button:hover {
 }
 
 .flex-item {
-    width: calc(100% / 16);
-    height: calc(100% / 16);
     border: 1px solid black;
 }
 
