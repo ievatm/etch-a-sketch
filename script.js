@@ -10,4 +10,6 @@ function createGrid(size) {
     }
 }
 
+createGrid(16);
+
 
