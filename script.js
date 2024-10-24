@@ -13,7 +13,7 @@ function createGrid(size) {
         div.style.height = `${itemSize}%`;
 
         container.appendChild(div);
-        
+
         div.addEventListener("mouseover", () => {
             div.classList.add("hovered");  
         })
@@ -23,9 +23,11 @@ function createGrid(size) {
 createGrid(16);
 
 document.querySelector(".new-grid-btn").addEventListener("click", () => {
-    const newSize = prompt ("Enter a new grid size");
-    if (newSize && newSize > 0) {
+    const newSize = prompt ("Enter a new grid size, max 100");
+    if (newSize && newSize > 0 && newSize <= 100) {
         createGrid(newSize);
+    } else if (newSize > 100) {
+        alert("please enter a valid number up to 100 max");
     } else {
         alert("Please enter a valid number");
     }
