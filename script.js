@@ -12,11 +12,16 @@ function createGrid(size) {
         div.style.width = `${itemSize}%`;
         div.style.height = `${itemSize}%`;
 
+        div.style.opacity = "1";
+
         container.appendChild(div);
 
         div.addEventListener("mouseover", () => {
-            div.classList.add("hovered");  
-        })
+            let currentOpacity = parseFloat(div.style.opacity);
+            if (currentOpacity > 0) {
+                div.style.opacity = (currentOpacity - 0.1).toFixed(1);
+            }
+        });
     }
 }
 
